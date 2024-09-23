@@ -1,3 +1,22 @@
+/*----------------------------------------------- globals --------------------------------------------------*/
+:root {
+
+    /* colors */
+
+    --background: #0F0F0F;
+    --background-content: #1E201E;
+  
+
+    /* shadows */
+
+    --shadow-background: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+    /* fonts */
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,25 +31,28 @@ li {
     list-style: none;
 }
 
+/*--------------------------------------------- aside ------------------------------------------------*/
 body {
-    background-color: #0F0F0F;
+    display: flex;
+    background-color: var(--background);
 }
 
-nav {
+aside {
     width: 20%;
     height: 100vh;
-    padding: 10px;
+    padding: 3% 0% 3% 3%;
 }
 
-.navbar {
-    background-color: #1E201E;
+.aside_content {
+    background-color: var(--background-content);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 10%;
     height: 100%;
     width: 100%;
+    box-shadow: var(--shadow-background);
 }
 
 .perfil {
@@ -42,4 +64,19 @@ nav {
     width: 100%;
     height: 100%;
     border-radius: 20px;
+}
+
+/*--------------------------------------------- content ------------------------------------------------*/
+.back {
+    width: 80%;
+    height: 100vh;
+    padding: 3% 3% 3% 1.5%;
+}
+
+.content {
+    background-color: var(--background-content);
+    border-radius: 20px;
+    padding: 10%;
+    height: 100%;
+    width: 100%;
 }
