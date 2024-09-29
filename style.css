@@ -1,19 +1,27 @@
 /*----------------------------------------------- globals --------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
 
     /* colors */
 
     --background: #0F0F0F;
     --background-content: #1E201E;
+    --border-content: 1px solid rgba(102, 0, 102, 0.2);
+    --purple: #4d004d;
   
 
     /* shadows */
 
-    --shadow-background: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow-background: rgba(102, 0, 102, 0.20) 0px 5px 15px;
 
 
     /* fonts */
 
+    --family: "Source Code Pro", monospace;
+    --weight: <weight>;
+    --font-style: normal;
+    --font-optical-sizing: auto;
 }
 
 
@@ -21,6 +29,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--family);
 }
 
 a {
@@ -45,6 +54,8 @@ aside {
 
 .aside_content {
     background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -52,7 +63,6 @@ aside {
     padding: 10%;
     height: 100%;
     width: 100%;
-    box-shadow: var(--shadow-background);
 }
 
 .perfil {
@@ -75,8 +85,23 @@ aside {
 
 .content {
     background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
     border-radius: 20px;
-    padding: 10%;
     height: 100%;
     width: 100%;
+}
+
+nav {
+    background-color: #4d004d;
+    width: 70%;
+    height: 10%;
+    border-radius: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
 }
