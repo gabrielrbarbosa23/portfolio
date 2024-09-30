@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Gabriel R Barbosa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <script>
+        Swal.fire({
+            title: "Este portfólio está em andamento.",
+            text: "Deseja ver o portfólio em vigor ou ver o andamento deste?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Portfólio em vigor",
+            denyButtonText: "Ver o andamento deste"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href='https://gabrielrbarbosa23.github.io/portfolio3D/';
+            } else if (result.isDenied) {
+                window.location.href='https://gabrielrbarbosa23.github.io/portfolio/';
+            }
+        });
+    </script>
     <aside>
         <div class="aside_content">
             <div class="perfil">
