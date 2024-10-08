@@ -7,8 +7,13 @@
 
     --background: #0F0F0F;
     --background-content: #1E201E;
+    --background-content2: #252725;
+    --title: #c7d1c7;
+    --text: #a2a9a2;
+    --text-hover: #fff;
     --border-content: 1px solid rgba(102, 0, 102, 0.2);
     --purple: #4d004d;
+    --purple-light: #660066;
   
 
     /* shadows */
@@ -23,7 +28,6 @@
     --font-style: normal;
     --font-optical-sizing: auto;
 }
-
 
 * {
     margin: 0;
@@ -40,12 +44,12 @@ li {
     list-style: none;
 }
 
-/*--------------------------------------------- aside ------------------------------------------------*/
 body {
     display: flex;
     background-color: var(--background);
 }
 
+/*--------------------------------------------- aside ------------------------------------------------*/
 aside {
     width: 20%;
     height: 100vh;
@@ -63,6 +67,7 @@ aside {
     padding: 10%;
     height: 100%;
     width: 100%;
+    color: var(--title);
 }
 
 .perfil {
@@ -83,25 +88,157 @@ aside {
     padding: 3% 3% 3% 1.5%;
 }
 
-.content {
-    background-color: var(--background-content);
-    border: var(--border-content);
-    box-shadow: var(--shadow-background);
-    border-radius: 20px;
-    height: 100%;
-    width: 100%;
-}
-
 nav {
-    background-color: #4d004d;
+    background-color: var(--background-content2);
+    border: var(--border-content);
     width: 70%;
     height: 10%;
     border-radius: 0px 20px 0px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 nav ul {
     display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav a {
+    color: #a2a9a2;
+}
+
+.active {
+    color: #fff;
+}
+
+/*--------------------------------------------- Home ------------------------------------------------*/
+.home {
+    position: relative;
+    background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.home-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.home-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.home-content::-webkit-scrollbar-track {
+    background: var(--background-content2);
+}
+
+.home-content::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--background-content2);
+}
+
+.home-content::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+.home-content::-webkit-scrollbar-thumb:active {
+    background: #800080;
+}
+
+.home-div-title {
+    width: 30%;
+    height: 20%;
+}
+
+.home-line {
+    background-color: var(--purple);
+    border-radius: 20px;
+    height: 5px;
+    width: 50%;
+}
+
+/*--------------------------------------------- About me ------------------------------------------------*/
+.about {
+    display: none;
+    position: relative;
+    background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.about-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.about-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.about-content::-webkit-scrollbar-track {
+    background: var(--background-content2);
+}
+
+.about-content::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--background-content2);
+}
+
+.about-content::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+.about-content::-webkit-scrollbar-thumb:active {
+    background: #800080;
+}
+
+.about-div-title {
+    width: 30%;
+    height: 20%;
+}
+
+.about-line {
+    background-color: var(--purple);
+    border-radius: 20px;
+    height: 5px;
+    width: 50%;
+}
+
+.about-text {
+    width: 100%;
+    height: 50%;
+}
+
+.what-im-doing {
+    width: 100%;
+    height: 50%;
+}
+
+.testimonial {
+    width: 100%;
+    height: 50%;
 }

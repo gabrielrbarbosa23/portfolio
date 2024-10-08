@@ -6,6 +6,7 @@
     <title>Portfólio - Gabriel R Barbosa</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <script>
@@ -34,30 +35,102 @@
         </div>
     </aside>
     <div class="back">
-        <div class="content">
+        <div class="home" id="home">
             <nav>
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a href="#" onclick="home()" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a href="#" onclick="about()">About</a>
                     </li>
                     <li>
-                        <a href="">Projects</a>
+                        <a href="#" onclick="projects()">Projects</a>
                     </li>
                     <li>
-                        <a href="">Resume</a>
+                        <a href="#" onclick="resume()">Resume</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#" onclick="contact()">Contact</a>
                     </li>
                 </ul>
             </nav>
+            <div class="home-content">
+                <div class="home-div-title">
+                    <h1>Home</h1>
+                    <div class="home-line"></div>
+                </div>
+                <div class="home-text">
+                    <p class="p1">
+                        Hi, I'm Gabriel, a junior full-stack software engineer. 
+                        Currently, I work at Braziline Indústria e Comércio LTDA 
+                        as a full-stack software developer, primarily using PHP, MySQL, 
+                        Bootstrap, HTML, CSS, and WordPress.
+                    </p>
+                    <p class="p2">
+                        Considering that I am in the IT sector, I need to have extensive 
+                        knowledge of various technologies, both software and hardware, 
+                        to meet the company's demands. I am passionate about the IT field, 
+                        which allows me to be highly dedicated and continuously improve in my activities 
+                        and career.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="about()" class="active">About</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="projects()">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="resume()">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="contact()">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="about-content">
+                <div class="about-div-title">
+                    <h1>About me</h1>
+                    <div class="about-line"></div>
+                </div>
+                <div class="about-text">
+                    <p class="p1">
+                        Hi, I'm Gabriel, a junior full-stack software engineer. 
+                        Currently, I work at Braziline Indústria e Comércio LTDA 
+                        as a full-stack software developer, primarily using PHP, MySQL, 
+                        Bootstrap, HTML, CSS, and WordPress.
+                    </p>
+                    <p class="p2">
+                        Considering that I am in the IT sector, I need to have extensive 
+                        knowledge of various technologies, both software and hardware, 
+                        to meet the company's demands. I am passionate about the IT field, 
+                        which allows me to be highly dedicated and continuously improve in my activities 
+                        and career.
+                    </p>
+                </div>
+                <div class="what-im-doing">
+                    <h1>What i'm doing</h1>
+                </div>
+                <div class="testimonial">
+                    <h1>Testimonials</h1>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
 
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
