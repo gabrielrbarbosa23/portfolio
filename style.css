@@ -8,7 +8,7 @@
     --background: #0F0F0F;
     --background-content: #1E201E;
     --background-content2: #252725;
-    --title: #c7d1c7;
+    --title: #fff;
     --text: #a2a9a2;
     --text-hover: #fff;
     --border-content: 1px solid rgba(102, 0, 102, 0.2);
@@ -49,6 +49,11 @@ body {
     background-color: var(--background);
 }
 
+::selection {
+    background-color: var(--purple);
+    color: #fff;
+}
+
 /*--------------------------------------------- aside ------------------------------------------------*/
 aside {
     width: 20%;
@@ -79,6 +84,125 @@ aside {
     width: 100%;
     height: 100%;
     border-radius: 20px;
+}
+
+.perfil img:hover{
+    cursor: pointer;
+}
+
+.image-only-modal {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 300px;
+    height: 400px; 
+    box-shadow: none;
+    overflow: hidden;
+    background: none;
+    border-radius: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.swal2-image {
+    margin: 0;
+}
+
+.aside_content h1{
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.aside_content p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.aside-line {
+    margin-top: 25px;
+    background-color: var(--text);
+    opacity: .2;
+    border-radius: 20px;
+    height: 1px;
+    width: 100%;
+}
+
+.icons-box {
+    background-color: var(--background-content2);
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.aside-email {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.aside-email-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside-email-box span {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.aside-email-box a {
+    font-size: 12px;
+    color: var(--title);
+}
+
+.aside-phone {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.aside-phone-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside-phone-box span {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.aside-phone-box a {
+    font-size: 12px;
+    color: var(--title);
+}
+
+.aside-location {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.aside-location-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside-location-box span:first-child {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.aside-location-box span:last-child {
+    font-size: 12px;
+    color: var(--title);
 }
 
 /*--------------------------------------------- content ------------------------------------------------*/
@@ -113,7 +237,7 @@ nav a {
 }
 
 .active {
-    color: #fff;
+    color: var(--text-hover) !important;
 }
 
 /*--------------------------------------------- Home ------------------------------------------------*/
@@ -134,7 +258,7 @@ nav a {
 .home-content {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 30px;
     overflow-y: auto;
 }
 
@@ -163,6 +287,7 @@ nav a {
 .home-div-title {
     width: 30%;
     height: 20%;
+    color: var(--title);
 }
 
 .home-line {
@@ -170,6 +295,46 @@ nav a {
     border-radius: 20px;
     height: 5px;
     width: 50%;
+}
+
+.apresentation {
+    color: var(--text);
+}
+
+.keyword {
+    color: lightblue;
+}
+
+.variable {
+    color: #0047b3;
+}
+
+.property {
+    color: #fff;
+}
+
+.identifier {
+    color: #39ac73;
+}
+
+.return {
+    color: #ff1a8c;
+}
+
+.string {
+    color: #ffff4d;
+}
+
+.boolean {
+    color: #0047b3;
+}
+
+.number {
+    color: #0047b3;
+}
+
+.operator {
+    color: #ff1a8c;
 }
 
 /*--------------------------------------------- About me ------------------------------------------------*/
@@ -190,7 +355,7 @@ nav a {
 .about-content {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 30px;
     overflow-y: auto;
 }
 
@@ -219,6 +384,7 @@ nav a {
 .about-div-title {
     width: 30%;
     height: 20%;
+    color: var(--title);
 }
 
 .about-line {
@@ -231,6 +397,16 @@ nav a {
 .about-text {
     width: 100%;
     height: 50%;
+    color: var(--text);
+}
+
+.skills {
+    width: 100%;
+    height: 50%;
+}
+
+.skills h1 {
+    color: var(--title);
 }
 
 .what-im-doing {
@@ -238,7 +414,219 @@ nav a {
     height: 50%;
 }
 
+.what-im-doing h1 {
+    color: var(--title);
+}
+
 .testimonial {
     width: 100%;
     height: 50%;
 }
+
+.testimonial h1 {
+    color: var(--title);
+}
+
+/*--------------------------------------------- Projects ------------------------------------------------*/
+.projects {
+    display: none;
+    position: relative;
+    background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.projects-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.projects-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.projects-content::-webkit-scrollbar-track {
+    background: var(--background-content2);
+}
+
+.projects-content::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--background-content2);
+}
+
+.projects-content::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+.projects-content::-webkit-scrollbar-thumb:active {
+    background: #800080;
+}
+
+.projects-div-title {
+    width: 30%;
+    height: 20%;
+    color: var(--title);
+}
+
+.projects-line {
+    background-color: var(--purple);
+    border-radius: 20px;
+    height: 5px;
+    width: 50%;
+}
+
+.projects-navbar {
+    width: 100%;
+    height: 20%;
+}
+
+.projects-navbar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.projects-navbar ul a {
+    color: var(--text);
+}
+
+.projects-navbar ul a:hover {
+    color: var(--text-hover);
+}
+
+
+/*--------------------------------------------- Resume ------------------------------------------------*/
+.resume {
+    display: none;
+    position: relative;
+    background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.resume-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.resume-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.resume-content::-webkit-scrollbar-track {
+    background: var(--background-content2);
+}
+
+.resume-content::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--background-content2);
+}
+
+.resume-content::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+.resume-content::-webkit-scrollbar-thumb:active {
+    background: #800080;
+}
+
+.resume-div-title {
+    width: 30%;
+    height: 20%;
+    color: var(--title);
+}
+
+.resume-line {
+    background-color: var(--purple);
+    border-radius: 20px;
+    height: 5px;
+    width: 50%;
+}
+
+.resume-text {
+    width: 100%;
+    height: 50%;
+    color: var(--text);
+}
+
+/*--------------------------------------------- Contact ------------------------------------------------*/
+.contact {
+    display: none;
+    position: relative;
+    background-color: var(--background-content);
+    border: var(--border-content);
+    box-shadow: var(--shadow-background);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.contact-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.contact-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.contact-content::-webkit-scrollbar-track {
+    background: var(--background-content2);
+}
+
+.contact-content::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--background-content2);
+}
+
+.contact-content::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+.contact-content::-webkit-scrollbar-thumb:active {
+    background: #800080;
+}
+
+.contact-div-title {
+    width: 30%;
+    height: 20%;
+    color: var(--title);
+}
+
+.contact-line {
+    background-color: var(--purple);
+    border-radius: 20px;
+    height: 5px;
+    width: 50%;
+}
+
+.contact-text {
+    width: 100%;
+    height: 50%;
+    color: var(--text);
+}
+

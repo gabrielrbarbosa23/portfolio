@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Gabriel R Barbosa</title>
+    <title>Portfolio - Gabriel R Barbosa</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -28,13 +28,46 @@
     <aside>
         <div class="aside_content">
             <div class="perfil">
-                <img src="assets/img/me.JPG" alt="foto">
+                <img src="assets/img/me.webp" alt="foto" onclick="javascript:openImg()">
             </div>
             <h1>Gabriel R Barbosa</h1>
-            <p>Desenvolvedor fullstack</p>
+            <p>Fullstack Developer</p>
+
+            <div class="aside-line"></div>
+
+            <div class="aside-email">
+                <div class="icons-box">
+
+                </div>
+                <div class="aside-email-box">
+                    <span>Email</span>
+                    <a href="mailto:gabrieldevbarbosa@gmail.com">gabrieldevbarbosa@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="aside-phone">
+                <div class="icons-box">
+
+                </div>
+                <div class="aside-phone-box">
+                    <span>Phone</span>
+                    <a href="tel:+5521995872504">+55 21 99587-2504</a>
+                </div>
+            </div>
+
+            <div class="aside-location">
+                <div class="icons-box">
+
+                </div>
+                <div class="aside-location-box">
+                    <span>Location</span>
+                    <span>Petrópolis,RJ - Brazil</span>
+                </div>
+            </div>
         </div>
     </aside>
     <div class="back">
+        <!---------------------------------------- Home -------------------------------------------->
         <div class="home" id="home">
             <nav>
                 <ul>
@@ -60,24 +93,29 @@
                     <h1>Home</h1>
                     <div class="home-line"></div>
                 </div>
-                <div class="home-text">
-                    <p class="p1">
-                        Hi, I'm Gabriel, a junior full-stack software engineer. 
-                        Currently, I work at Braziline Indústria e Comércio LTDA 
-                        as a full-stack software developer, primarily using PHP, MySQL, 
-                        Bootstrap, HTML, CSS, and WordPress.
-                    </p>
-                    <p class="p2">
-                        Considering that I am in the IT sector, I need to have extensive 
-                        knowledge of various technologies, both software and hardware, 
-                        to meet the company's demands. I am passionate about the IT field, 
-                        which allows me to be highly dedicated and continuously improve in my activities 
-                        and career.
-                    </p>
-                </div>
+                <div class="apresentation">
+                    <pre>
+    <span class="keyword">const</span> <span class="variable">coder</span> = {
+        <span class="property">name</span>: <span class="string">'Gabriel R Barbosa'</span>,
+        <span class="property">skills</span>: [<span class="string">'PHP'</span>, <span class="string">'React'</span>, <span class="string">'MySQL'</span>, <span class="string">'Javascript'</span>, <span class="string">'Three.js'</span>, <span class="string">'WordPress'</span>, <span class="string">'Bootstrap'</span>, <span class="string">'Jquery'</span>],
+        <span class="property">hardWorker</span>: <span class="boolean">true</span>,
+        <span class="property">dedicated</span>: <span class="boolean">true</span>,
+        <span class="property">quickLearner</span>: <span class="boolean">true</span>,
+        <span class="property">problemSolver</span>: <span class="boolean">true</span>,
+        <span class="identifier">hireable</span>: <span class="keyword">function</span>() {
+            <span class="return">return</span> (
+                <span class="keyword">this</span>.<span class="property">hardWorker</span> <span class="operator">&&</span>
+                <span class="keyword">this</span>.<span class="property">problemSolver</span> <span class="operator">&&</span>
+                <span class="keyword">this</span>.<span class="property">skills</span>.<span class="keyword">length</span> <span class="operator">>=</span> <span class="number">8</span>
+            );
+        }
+    };
+                    </pre>
+                </div>                
             </div>
         </div>
 
+        <!---------------------------------------- About me -------------------------------------------->
         <div class="about" id="about">
             <nav>
                 <ul>
@@ -110,6 +148,7 @@
                         as a full-stack software developer, primarily using PHP, MySQL, 
                         Bootstrap, HTML, CSS, and WordPress.
                     </p>
+                    <br>
                     <p class="p2">
                         Considering that I am in the IT sector, I need to have extensive 
                         knowledge of various technologies, both software and hardware, 
@@ -118,11 +157,128 @@
                         and career.
                     </p>
                 </div>
+                <div class="skills">
+                    <h1>Skills</h1>
+                </div>
                 <div class="what-im-doing">
                     <h1>What i'm doing</h1>
                 </div>
-                <div class="testimonial">
+               <!--  <div class="testimonial">
                     <h1>Testimonials</h1>
+                </div> -->
+            </div>
+        </div>
+
+        <!---------------------------------------- Projects -------------------------------------------->
+        <div class="projects" id="projects">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="about()">About</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="projects()" class="active">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="resume()">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="contact()">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="projects-content">
+                <div class="projects-div-title">
+                    <h1>Projects</h1>
+                    <div class="projects-line"></div>
+                </div>
+                <div class="projects-navbar">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="fullstack()" class="active" id="nav-fullstack">Full-stack</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="frontend()" id="nav-frontend">Front-end</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="backend()" id="nav-backend">Back-end</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="frontend" id="frontend">
+                    frontend
+                </div>
+
+                <div class="backend" id="backend">
+                    backend
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------------------- Resume -------------------------------------------->
+        <div class="resume" id="resume">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="about()">About</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="projects()">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="resume()" class="active">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="contact()">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="resume-content">
+                <div class="resume-div-title">
+                    <h1>Resume</h1>
+                    <div class="resume-line"></div>
+                </div>
+                <div class="resume-text">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------------------- Contact -------------------------------------------->
+        <div class="contact" id="contact">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="home()">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="about()">About</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="projects()">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="resume()">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="contact()" class="active">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="contact-content">
+                <div class="contact-div-title">
+                    <h1>Contact</h1>
+                    <div class="contact-line"></div>
+                </div>
+                <div class="contact-text">
+                    
                 </div>
             </div>
         </div>
