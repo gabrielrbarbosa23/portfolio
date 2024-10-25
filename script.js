@@ -59,27 +59,51 @@ function contact() {
 
 /*--------------------------------------------- projects ------------------------------------------------*/
 function fullstack() {
-    $('#frontend').show();
-    $('#backend').show();
+    $('.frontend').show();
+    $('.backend').show();
+    $('.fullstack').show();
     $('#nav-fullstack').addClass('active');
     $('#nav-frontend').removeClass('active');
     $('#nav-backend').removeClass('active');
 }
 
 function frontend() {
-    $('#frontend').show();
-    $('#fullstack').hide();
-    $('#backend').hide();
+    $('.frontend').show();
+    $('.fullstack').show();
+    $('.backend').hide();
     $('#nav-fullstack').removeClass('active');
     $('#nav-backend').removeClass('active');
     $('#nav-frontend').addClass('active');
 }
 
 function backend() {
-    $('#backend').show();
-    $('#fullstack').hide();
-    $('#frontend').hide();
+    $('.backend').show();
+    $('.fullstack').show();
+    $('.frontend').hide();
     $('#nav-fullstack').removeClass('active');
     $('#nav-frontend').removeClass('active');
     $('#nav-backend').addClass('active');
+}
+
+/*--------------------------------------------- skills ------------------------------------------------*/
+function skillFront() {
+    $('.skills-list-front').toggle();
+    const icon = $('#icon-front');
+    toggleIcon(icon);
+}
+
+function skillBack() {
+    $('.skills-list-back').toggle();
+    const icon = $('#icon-back');
+    toggleIcon(icon);
+}
+
+function skillOther() {
+    $('.skills-list-other').toggle();
+    const icon = $('#icon-other');
+    toggleIcon(icon);
+}
+
+function toggleIcon(icon) {
+    icon.toggleClass('rotate');
 }
