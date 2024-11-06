@@ -107,3 +107,27 @@ function skillOther() {
 function toggleIcon(icon) {
     icon.toggleClass('rotate');
 }
+
+/*--------------------------------------------- skills ------------------------------------------------*/
+
+function work() {
+    $('.works').show();
+    $('.educations').hide();
+    $('#work').addClass('active');
+    $('#education').removeClass('active');
+
+    $('.resume-icons-box i')
+        .removeClass('fa-briefcase')
+        .addClass('fa-graduation-cap');
+}
+
+function education() {
+    $('.educations').css('display', 'flex').show();
+    $('.works').hide();
+    $('#education').addClass('active');
+    $('#work').removeClass('active');
+
+    $('.resume-icons-box i')
+        .removeClass('fa-graduation-cap')
+        .addClass('fa-briefcase');
+}

@@ -5,7 +5,7 @@
 
     /* colors */
 
-    --background: #0F0F0F;
+    /* --background: #0F0F0F;
     --background-content: #1E201E;
     --background-content2: #252725;
     --title: #fff;
@@ -13,13 +13,27 @@
     --text-hover: #fff;
     --border-content: 1px solid rgba(102, 0, 102, 0.2);
     --purple: #4d004d;
+    --purple-light: #660066; */
+
+    --background: #0F0F0F;
+    --background-content: #1e1e1f;
+    --background-content2: #2b2b2c;
+    --background-content3: #202022;
+    --title: #fafafa;
+    --text: #d6d6d6;
+    --text-hover: #fff;
+    --border-content: 1px solid rgb(56, 56, 56);
+    --yellow: #ffbb5c;
     --purple-light: #660066;
   
 
     /* shadows */
 
-    --shadow-background: rgba(102, 0, 102, 0.20) 0px 5px 15px;
-
+    /* --shadow-background: rgba(102, 0, 102, 0.20) 0px 5px 15px; */
+    
+    --shadow-background: rgba(255, 187, 92, 0.04) 0px 5px 15px;
+    --shadow-content: 0 3px 3px -3px rgba(255, 255, 255, 0.45) inset, 20px 0 2px -20px rgba(255, 255, 255, 0.45) inset;
+    
 
     /* fonts */
 
@@ -50,8 +64,13 @@ body {
 }
 
 ::selection {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     color: #fff;
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: #000;
 }
 
 /*--------------------------------------------- aside ------------------------------------------------*/
@@ -131,12 +150,13 @@ aside {
     border-radius: 12px;
     width: 40px;
     height: 40px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    box-shadow: var(--shadow-content);
     flex-shrink: 0;
     margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--yellow);
 }
 
 .aside-email {
@@ -176,6 +196,11 @@ aside {
     width: 100%;
     margin-top: 25px;
     overflow: hidden;
+}
+
+.aside-phone:hover {
+    overflow: visible;
+    z-index: 5;
 }
 
 .aside-phone-box {
@@ -253,7 +278,7 @@ nav a {
 }
 
 .active {
-    color: var(--text-hover) !important;
+    color: var(--yellow) !important;
 }
 
 /*--------------------------------------------- Home ------------------------------------------------*/
@@ -287,7 +312,7 @@ nav a {
 }
 
 .home-content::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--yellow);
     border-radius: 10px;
     border: 2px solid var(--background-content2);
 }
@@ -307,7 +332,7 @@ nav a {
 }
 
 .home-line {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     border-radius: 20px;
     height: 5px;
     width: 50%;
@@ -401,7 +426,7 @@ nav a {
 }
 
 .about-content::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--yellow);
     border-radius: 10px;
     border: 2px solid var(--background-content2);
 }
@@ -421,7 +446,7 @@ nav a {
 }
 
 .about-line {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     border-radius: 20px;
     height: 5px;
     width: 50%;
@@ -435,7 +460,7 @@ nav a {
 
 .skills {
     width: 100%;
-    height: 60%;
+    height: 75%;
 }
 
 .skills h1 {
@@ -448,8 +473,21 @@ nav a {
     margin-top: 20px;
 }
 
+.skills-front {
+    width: 250px;
+}
+
+.skills-back {
+    width: 250px;
+}
+
+.skills-other {
+    width: 250px;
+}
+
 .skills-title {
     cursor: pointer;
+    text-align: center;
 }
 
 .skills-title i {
@@ -479,22 +517,146 @@ nav a {
 }
 
 .skills-html{
+    width: 95%;
+}
+
+.skills-css{
+    width: 95%;
+}
+
+.skills-js{
+    width: 90%;
+}
+
+.skills-react{
+    width: 75%;
+}
+
+.skills-wordpress{
+    width: 90%;
+}
+
+.skills-three{
+    width: 60%;
+}
+
+.skills-bootstrap{
     width: 80%;
+}
+
+.skills-tailwind{
+    width: 60%;
+}
+
+.skills-jquery{
+    width: 80%;
+}
+
+.skills-react-native{
+    width: 70%;
+}
+
+.skills-php{
+    width: 90%;
+}
+
+.skills-wordpress{
+    width: 90%;
+}
+
+.skills-node{
+    width: 60%;
+}
+
+.skills-firebase{
+    width: 60%;
+}
+
+.skills-mysql{
+    width: 80%;
+}
+
+.skills-delphi{
+    width: 50%;
+}
+
+.skills-api{
+    width: 50%;
+}
+
+.skills-canva{
+    width: 80%;
+}
+
+.skills-git{
+    width: 90%;
+}
+
+.skills-microfost{
+    width: 90%;
+}
+
+.skills-3df{
+    width: 70%;
+}
+
+.skills-windows{
+    width: 95%;
+}
+
+.skills-mac{
+    width: 85%;
+}
+
+.skills-linux{
+    width: 65%;
 }
 
 .skills-percentage{
     height: 4px;
     display: block;
-    background-color: var(--purple);
+    background-color: var(--yellow);
 }
 
-.what-im-doing {
+.wid {
     width: 100%;
     height: 50%;
 }
 
-.what-im-doing h1 {
+.wid h1 {
     color: var(--title);
+}
+
+.wid-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.wid-web {
+    width: 49%;
+    background-color: var(--background-content2);
+    border-radius: 20px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.wid-mobile {
+    width: 49%;
+    background-color: var(--background-content2);
+    border-radius: 20px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.wid-digital {
+    width: 49%;
+    background-color: var(--background-content2);
+    border-radius: 20px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .testimonial {
@@ -537,7 +699,7 @@ nav a {
 }
 
 .projects-content::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--yellow);
     border-radius: 10px;
     border: 2px solid var(--background-content2);
 }
@@ -557,7 +719,7 @@ nav a {
 }
 
 .projects-line {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     border-radius: 20px;
     height: 5px;
     width: 50%;
@@ -658,7 +820,7 @@ nav a {
 }
 
 .resume-content::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--yellow);
     border-radius: 10px;
     border: 2px solid var(--background-content2);
 }
@@ -678,15 +840,102 @@ nav a {
 }
 
 .resume-line {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     border-radius: 20px;
     height: 5px;
     width: 50%;
 }
 
-.resume-text {
+.resume-trajetory {
     width: 100%;
-    height: 50%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-trajetory-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-trajetory-work {
+    width: 45%;
+    text-align: right;
+}
+
+.resume-trajetory-work a {
+    margin-right: 50px;
+    color: var(--text);
+}
+
+.resume-trajetory-icon {
+    width: 10%;
+}
+
+.resume-icons-box {
+    background-color: var(--background-content2);
+    color: var(--title);
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--shadow-content);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+}
+
+.resume-trajetory-education {
+    width: 45%;
+    text-align: left;
+}
+
+.resume-trajetory-education a {
+    color: var(--text);
+}
+
+.resume-trajetory-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.resume-work {
+    width: 45%;
+    text-align: right;
+}
+
+.works {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    color: var(--text);
+}
+
+.resume-trajetory-line {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-trajetory-line div {
+    background-color: var(--text);
+    width: 1px;
+}
+
+.resume-education {
+    width: 45%;
+    text-align: left;
+}
+
+.educations {
+    display: none;
+    margin-top: 25px;
+    flex-direction: column;
+    gap: 60px;
     color: var(--text);
 }
 
@@ -721,7 +970,7 @@ nav a {
 }
 
 .contact-content::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--yellow);
     border-radius: 10px;
     border: 2px solid var(--background-content2);
 }
@@ -741,7 +990,7 @@ nav a {
 }
 
 .contact-line {
-    background-color: var(--purple);
+    background-color: var(--yellow);
     border-radius: 20px;
     height: 5px;
     width: 50%;
