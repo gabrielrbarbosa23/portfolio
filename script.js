@@ -58,14 +58,6 @@ function contact() {
 }
 
 /*--------------------------------------------- projects ------------------------------------------------*/
-function fullstack() {
-    $('.frontend').show();
-    $('.backend').show();
-    $('.fullstack').show();
-    $('#nav-fullstack').addClass('active');
-    $('#nav-frontend').removeClass('active');
-    $('#nav-backend').removeClass('active');
-}
 
 function frontend() {
     $('.frontend').show();
@@ -85,31 +77,48 @@ function backend() {
     $('#nav-backend').addClass('active');
 }
 
-/*--------------------------------------------- skills ------------------------------------------------*/
-function skillFront() {
-    $('.skills-list-front').toggle();
-    const icon = $('#icon-front');
-    toggleIcon(icon);
-}
-
-function skillBack() {
-    $('.skills-list-back').toggle();
-    const icon = $('#icon-back');
-    toggleIcon(icon);
-}
-
-function skillOther() {
-    $('.skills-list-other').toggle();
-    const icon = $('#icon-other');
-    toggleIcon(icon);
-}
-
-function toggleIcon(icon) {
-    icon.toggleClass('rotate');
+function fullstack() {
+    $('.frontend').show();
+    $('.backend').show();
+    $('.fullstack').show();
+    $('#nav-fullstack').addClass('active');
+    $('#nav-frontend').removeClass('active');
+    $('#nav-backend').removeClass('active');
 }
 
 /*--------------------------------------------- skills ------------------------------------------------*/
+function front() {
+    $('.skills-front').show();
+    $('.skills-back').hide();
+    $('.skills-tools').hide();
+    $('.skills-front').css('display', 'grid').show();
+    $('#skills-nav-front').addClass('active');
+    $('#skills-nav-back').removeClass('active');
+    $('#skills-nav-tools').removeClass('active');
+}
 
+function back() {
+    $('.skills-back').show();
+    $('.skills-front').hide();
+    $('.skills-tools').hide();
+    $('.skills-back').css('display', 'grid').show();
+    $('#skills-nav-back').addClass('active');
+    $('#skills-nav-front').removeClass('active');
+    $('#skills-nav-tools').removeClass('active');
+}
+
+function tools() {
+    $('.skills-tools').show();
+    $('.skills-back').hide();
+    $('.skills-front').hide();
+    $('.skills-tools').css('display', 'grid').show();
+    $('#skills-nav-tools').addClass('active');
+    $('#skills-nav-back').removeClass('active');
+    $('#skills-nav-front').removeClass('active');
+}
+
+
+/*--------------------------------------------- resume ------------------------------------------------*/
 function work() {
     $('.works').show();
     $('.educations').hide();

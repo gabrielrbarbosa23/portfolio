@@ -65,6 +65,18 @@
                     <span>Petrópolis,RJ - Brazil</span>
                 </div>
             </div>
+            
+            <div class="aside-social-media">
+                <a href="https://www.linkedin.com/in/gabriel-rabello-barbosa-204aa7142/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/gabrielrbarbosa/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/gabrielrbarbosa23?tab=repositories" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
     </aside>
     <div class="back">
@@ -159,290 +171,100 @@
                     </p>
                 </div>
                 <div class="skills">
-                    <h1>Skills</h1>
+                    <h2>Skills</h2>
+                    <div class="skills-navbar">
+                        <ul>
+                            <li>
+                                <a href="#" onclick="front()" class="active" id="skills-nav-front">Front-end</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="back()" id="skills-nav-back">Back-end</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="tools()" id="skills-nav-tools">Tools</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="skills-content">
                         <div class="skills-front">
-                            <h3 onclick="skillFront()" class="skills-title">
-                                Front-end&nbsp;<i id="icon-front" class="fa-solid fa-chevron-down"></i>
-                            </h3>
-                            <div class="skills-list-front">
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>HTML</p>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-html"></span>
-                                    </div>
-                                </div>
+                            <img title="Html" src="assets/logos/html.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>CSS</p>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-css"></span>
-                                    </div>
-                                </div>
+                            <img title="Css" src="assets/logos/css.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>JavaScript</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-js"></span>
-                                    </div>
-                                </div>
+                            <img title="Bootstrap" src="assets/logos/bootstrap.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>React</p>
-                                        <span>75%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-react"></span>
-                                    </div>
-                                </div>
+                            <img title="Jquery" src="assets/logos/jquery.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Wordpress</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-wordpress"></span>
-                                    </div>
-                                </div>
+                            <img title="Wordpress" src="assets/logos/wordpress.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Three.js</p>
-                                        <span>60%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-three"></span>
-                                    </div>
-                                </div>
+                            <img title="Three.js" src="assets/logos/Three.js.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Bootstrap</p>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-bootstrap"></span>
-                                    </div>
-                                </div>
+                            <img title="React" src="assets/logos/react.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Tailwind</p>
-                                        <span>60%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-tailwind"></span>
-                                    </div>
-                                </div>
+                            <img title="Tailwind" src="assets/logos/tailwind.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Jquery</p>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-jquery"></span>
-                                    </div>
-                                </div>
+                            <img title="Typescript" src="assets/logos/ts.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>React Native</p>
-                                        <span>70%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-react-native"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <img title="Javascript" src="assets/logos/js.webp" alt="">
+
+                            <img title="Sharepoint" src="assets/logos/sharepoint.svg" alt="">
                         </div>
                         <div class="skills-back">
-                            <h3 onclick="skillBack()" class="skills-title">
-                                Back-end&nbsp;<i id="icon-back" class="fa-solid fa-angle-up"></i>
-                            </h3>
-                            <div class="skills-list-back">
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>PHP</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-php"></span>
-                                    </div>
-                                </div>
+                            <img title="Php" src="assets/logos/PHP.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>WordPress</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-wordpress"></span>
-                                    </div>
-                                </div>
+                            <img title="Mysql" src="assets/logos/mysql.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Node.js</p>
-                                        <span>60%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-node"></span>
-                                    </div>
-                                </div>
+                            <img title="Firebase" src="assets/logos/firebase.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Firebase</p>
-                                        <span>60%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-firebase"></span>
-                                    </div>
-                                </div>
+                            <img title="Wordpress" src="assets/logos/wordpress.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>MySQL</p>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-mysql"></span>
-                                    </div>
-                                </div>
+                            <img title="Node.js" src="assets/logos/node.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Delphi</p>
-                                        <span>50%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-delphi"></span>
-                                    </div>
-                                </div>
+                            <img title="Next.js" src="assets/logos/next.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Rest API</p>
-                                        <span>50%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-api"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <img title="Api Restfull" src="assets/logos/rest-api.svg" alt="">
                         </div>
-                        <div class="skills-other">
-                            <h3 onclick="skillOther()" class="skills-title">
-                                Other technologies&nbsp;<i id="icon-other" class="fa-solid fa-angle-up"></i>
-                            </h3>
-                            <div class="skills-list-other">
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Canva</p>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-canva"></span>
-                                    </div>
-                                </div>
+                        <div class="skills-tools">
+                            <img title="Git" src="assets/logos/git.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Git/Github</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-git"></span>
-                                    </div>
-                                </div>
+                            <img title="Github" src="assets/logos/github.webp" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Microsoft Office/365</p>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-microsoft"></span>
-                                    </div>
-                                </div>
+                            <img title="Vercel" src="assets/logos/vercel.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>3df zephyr</p>
-                                        <span>70%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-3df"></span>
-                                    </div>
-                                </div>
+                            <img title="Wordpress" src="assets/logos/macos.svg" alt="">
+                            
+                            <img title="Api Restfull" src="assets/logos/windows.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Windows</p>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-windows"></span>
-                                    </div>
-                                </div>
+                            <img title="Node.js" src="assets/logos/canva.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Mac OS</p>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-mac"></span>
-                                    </div>
-                                </div>
+                            <img title="Next.js" src="assets/logos/3df.svg" alt="">
 
-                                <div class="skills-data">
-                                    <div class="skills-name">
-                                        <p>Linux</p>
-                                        <span>65%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-linux"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <img title="Api Restfull" src="assets/logos/365.svg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="wid">
-                    <h1>What i'm doing</h1>
+                    <h2>What i'm doing</h2>
                     <div class="wid-content">
                         <div class="wid-web">
-                            <i class="fa-solid fa-code"></i>
+                            <img src="assets/logos/web.svg" alt="">
                             <div>
                                 <h4>Web Development</h4>
-                                <p></p>
+                                <p>Quality and dedication in developing websites, including design ideas and creativity</p>
                             </div>
                         </div>
                         <div class="wid-mobile">
-                            <i class="fa-solid fa-mobile"></i>
+                            <img src="assets/logos/cell.svg" alt="">
                             <div>
                                 <h4>Mobile Apps</h4>
-                                <p></p>
+                                <p>Improving my knowledge with React Native</p>
                             </div>
                         </div>
                         <div class="wid-digital">
-                            <i class="fa-solid fa-video"></i>
+                            <img src="assets/logos/digital.svg" alt="">
                             <div>
                                 <h4>Digital Content Creation</h4>
-                                <p></p>
+                                <p>Creating video ideas for TikTok or Reels as a hobby</p>
                             </div>
                         </div>
                     </div>
@@ -482,13 +304,13 @@
                 <div class="projects-navbar">
                     <ul>
                         <li>
-                            <a href="#" onclick="fullstack()" class="active" id="nav-fullstack">Full-stack</a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="frontend()" id="nav-frontend">Front-end</a>
+                            <a href="#" onclick="frontend()" class="active" id="nav-frontend">Front-end</a>
                         </li>
                         <li>
                             <a href="#" onclick="backend()" id="nav-backend">Back-end</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fullstack()" id="nav-fullstack">Full-stack</a>
                         </li>
                     </ul>
                 </div>
@@ -497,6 +319,8 @@
                     <div class="frontend">
                         <img src="assets/img/ourbooks.webp" alt="ourbooks" onclick="javascript:window.open('https://ourbooks-personalwebsite.vercel.app/principal','_blank')">
                         <i class="fa-solid fa-eye icon"></i>
+                        <p>Ourbooks</p>
+                        <p>Personal website to read build with react</p>
                     </div>
                     <div class="frontend">
                         <img src="assets/img/converthings.webp" alt="converthings" onclick="javascript:window.open('https://convert-things.vercel.app/','_blank')">
@@ -573,43 +397,43 @@
                     <div class="resume-trajetory-content">
                         <div class="resume-work">
                             <div class="works">
-                                <div class="work-one">
+                                <div class="work-box work-one">
                                     <p class="work-title">Junior Development Analyst</p>
                                     <p class="work-subtitle">Braziline Industria e Comércio</p>
                                     <p class="work-year">09/2023 — Currently</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-two">
+                                <div class="work-box work-two">
                                     <p class="work-title">Web Development</p>
                                     <p class="work-subtitle">Autonomous</p>
                                     <p class="work-year">04/2022 — Currently</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-three">
+                                <div class="work-box work-three">
                                     <p class="work-title">Support technician and backend developer</p>
                                     <p class="work-subtitle">Trade Automação</p>
                                     <p class="work-year">08/2023 — 09/2023</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-four">
+                                <div class="work-box work-four">
                                     <p class="work-title">Position on the committee of Head of the Tender Service</p>
                                     <p class="work-subtitle">Municipal Administration Secretariat (Tenders)</p>
                                     <p class="work-year">01/2022 — 08/2023</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-five">
+                                <div class="work-box work-five">
                                     <p class="work-title">Paid internship</p>
                                     <p class="work-subtitle">Attorney General of the Municipality of Teresópolis</p>
                                     <p class="work-year">03/2019 — 12/2021</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-six">
+                                <div class="work-box work-six">
                                     <p class="work-title">Paid internship</p>
                                     <p class="work-subtitle">Office of the 2nd Criminal Court of Teresópolis</p>
                                     <p class="work-year">09/2018 — 03/2019</p>
                                     <p class="work-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                                 </div>
-                                <div class="work-seven">
+                                <div class="work-box work-seven">
                                     <p class="work-title">Conciliator and mediator</p>
                                     <p class="work-subtitle">Special Deputy Criminal Court of Teresópolis</p>
                                     <p class="work-year">03/2018 — 09/2018</p>

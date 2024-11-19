@@ -33,6 +33,7 @@
     
     --shadow-background: rgba(255, 187, 92, 0.04) 0px 5px 15px;
     --shadow-content: 0 3px 3px -3px rgba(255, 255, 255, 0.45) inset, 20px 0 2px -20px rgba(255, 255, 255, 0.45) inset;
+    --shadow-content-2: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     
 
     /* fonts */
@@ -95,6 +96,7 @@ aside {
 }
 
 .perfil {
+    margin-top: 30px;
     width: 120px;
     height: 120px;
 }
@@ -157,6 +159,11 @@ aside {
     align-items: center;
     justify-content: center;
     color: var(--yellow);
+    transition: transform 0.3s ease;
+}
+
+.icons-box:hover {
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
 .aside-email {
@@ -246,6 +253,23 @@ aside {
     color: var(--title);
 }
 
+.aside-social-media {
+    display: flex;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.aside-social-media a {
+    color: var(--text);
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.aside-social-media a:hover {
+    transform: scale(1.1);
+    color: var(--yellow);
+}
+
 /*--------------------------------------------- content ------------------------------------------------*/
 .back {
     width: 80%;
@@ -274,7 +298,11 @@ nav ul {
 }
 
 nav a {
-    color: #a2a9a2;
+    color: var(--text);
+}
+
+nav a:hover {
+    color: var(--yellow);
 }
 
 .active {
@@ -460,170 +488,109 @@ nav a {
 
 .skills {
     width: 100%;
-    height: 75%;
+    height: 90%;
 }
 
-.skills h1 {
+.skills h2 {
     color: var(--title);
 }
 
-.skills-content {
+.skills-navbar {
+    width: 100%;
+    height: 20%;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.skills-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.skills-navbar ul a {
+    color: var(--text);
+}
+
+.skills-navbar ul a:hover {
+    color: var(--yellow);
+}
+
+.skills-content {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .skills-front {
-    width: 250px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
-.skills-back {
-    width: 250px;
-}
-
-.skills-other {
-    width: 250px;
-}
-
-.skills-title {
-    cursor: pointer;
-    text-align: center;
-}
-
-.skills-title i {
+.skills-front img {
+    width: 65px;
+    height: 65px;
+    background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
+    border-radius: 12px;
+    padding: 10px;
     transition: transform 0.3s ease;
 }
 
-.rotate-up {
-    transform: rotate(180deg);
+.skills-front img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
-.skills-list-back {
+.skills-back {
     display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
-.skills-list-other {
+.skills-back img {
+    width: 65px;
+    height: 65px;
+    background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
+    border-radius: 12px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skills-back img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
+}
+
+.skills-tools {
     display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
-.skills-name {
-    display: flex;
-    justify-content: space-between;
+.skills-tools img {
+    width: 65px;
+    height: 65px;
+    background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
+    border-radius: 12px;
+    padding: 10px;
+    transition: transform 0.3s ease;
 }
 
-.skills-bar{
-    height: 4px;
-    background-color: var(--title);
-}
-
-.skills-html{
-    width: 95%;
-}
-
-.skills-css{
-    width: 95%;
-}
-
-.skills-js{
-    width: 90%;
-}
-
-.skills-react{
-    width: 75%;
-}
-
-.skills-wordpress{
-    width: 90%;
-}
-
-.skills-three{
-    width: 60%;
-}
-
-.skills-bootstrap{
-    width: 80%;
-}
-
-.skills-tailwind{
-    width: 60%;
-}
-
-.skills-jquery{
-    width: 80%;
-}
-
-.skills-react-native{
-    width: 70%;
-}
-
-.skills-php{
-    width: 90%;
-}
-
-.skills-wordpress{
-    width: 90%;
-}
-
-.skills-node{
-    width: 60%;
-}
-
-.skills-firebase{
-    width: 60%;
-}
-
-.skills-mysql{
-    width: 80%;
-}
-
-.skills-delphi{
-    width: 50%;
-}
-
-.skills-api{
-    width: 50%;
-}
-
-.skills-canva{
-    width: 80%;
-}
-
-.skills-git{
-    width: 90%;
-}
-
-.skills-microfost{
-    width: 90%;
-}
-
-.skills-3df{
-    width: 70%;
-}
-
-.skills-windows{
-    width: 95%;
-}
-
-.skills-mac{
-    width: 85%;
-}
-
-.skills-linux{
-    width: 65%;
-}
-
-.skills-percentage{
-    height: 4px;
-    display: block;
-    background-color: var(--yellow);
+.skills-tools img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
 .wid {
     width: 100%;
-    height: 50%;
+    height: 60%;
 }
 
-.wid h1 {
+.wid h2 {
     color: var(--title);
 }
 
@@ -633,30 +600,67 @@ nav a {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
+    margin-top: 30px;
 }
 
 .wid-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     width: 49%;
     background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
     border-radius: 20px;
     height: 100px;
     margin-bottom: 10px;
+    gap: 25px;
+    transition: transform 0.3s ease;
+}
+
+.wid-web:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
 .wid-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     width: 49%;
     background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
     border-radius: 20px;
     height: 100px;
     margin-bottom: 10px;
+    gap: 25px;
+    transition: transform 0.3s ease;
+}
+
+.wid-mobile:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
 .wid-digital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     width: 49%;
     background-color: var(--background-content2);
+    box-shadow: var(--shadow-content);
     border-radius: 20px;
     height: 100px;
     margin-bottom: 10px;
+    gap: 25px;
+    transition: transform 0.3s ease;
+}
+
+.wid-digital:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-content), var(--shadow-content-2);
 }
 
 .testimonial {
@@ -741,7 +745,7 @@ nav a {
 }
 
 .projects-navbar ul a:hover {
-    color: var(--text-hover);
+    color: var(--yellow);
 }
 
 .projects-box {
@@ -757,6 +761,20 @@ nav a {
     margin-bottom: 10px; 
     height: 180px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.projects-box > div img {
+    width: 100%;
+}
+
+/* .projects-box > div {
+    flex-basis: calc(25% - 10px); 
+    background-color: var(--background-content2);
+    padding: 10px;
+    margin-bottom: 10px; 
+    height: 180px;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -765,13 +783,18 @@ nav a {
 .projects-box > div img {
     width: 100%; 
     height: 100%;
+    border-radius: 20px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .projects-box > div:hover img {
-    transform: scale(1.1);
+    transform: scale(1.14);
     filter: blur(1px);
+}
+
+.projects-box > div p {
+    color: #fff;
 }
 
 .icon {
@@ -787,7 +810,7 @@ nav a {
 
 .projects-box > div:hover .icon {
     opacity: 1;
-}
+} */
 
 /*--------------------------------------------- Resume ------------------------------------------------*/
 .resume {
@@ -806,9 +829,11 @@ nav a {
 
 .resume-content {
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    max-height: 100%; 
     padding: 30px;
     overflow-y: auto;
+    display: inline-block; 
 }
 
 .resume-content::-webkit-scrollbar {
@@ -870,6 +895,10 @@ nav a {
     color: var(--text);
 }
 
+.resume-trajetory-work a:hover {
+    color: var(--yellow);
+}
+
 .resume-trajetory-icon {
     width: 10%;
 }
@@ -896,6 +925,10 @@ nav a {
     color: var(--text);
 }
 
+.resume-trajetory-education a:hover {
+    color: var(--yellow);
+}
+
 .resume-trajetory-content {
     width: 100%;
     height: 100%;
@@ -913,6 +946,10 @@ nav a {
     flex-direction: column;
     gap: 60px;
     color: var(--text);
+}
+
+.work-box {
+    background-color: var(--background-content2);
 }
 
 .resume-trajetory-line {
