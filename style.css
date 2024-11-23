@@ -960,6 +960,7 @@ nav a:hover {
 
 .resume-trajetory-line div {
     background-color: var(--text);
+    opacity: .2;
     width: 1px;
 }
 
