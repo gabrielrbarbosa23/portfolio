@@ -140,3 +140,10 @@ function education() {
         .removeClass('fa-graduation-cap')
         .addClass('fa-briefcase');
 }
+
+/*--------------------------------------------- aside mobile ------------------------------------------------*/
+
+function toggleAside() {
+    const aside = document.getElementById('aside');
+    aside.classList.toggle('expanded');
+}

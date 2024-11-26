@@ -113,6 +113,12 @@ aside {
     margin: 0;
 }
 
+.perfil-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .aside_content h1{
     margin-top: 25px;
     font-size: 17px;
@@ -124,6 +130,10 @@ aside {
 }
 
 .br-mobile {
+    display: none;
+}
+
+.fa-chevron-down {
     display: none;
 }
 
@@ -258,6 +268,10 @@ aside {
     color: var(--yellow);
 }
 
+.copy-mobile {
+    display: none;
+}
+
 /*--------------------------------------------- content ------------------------------------------------*/
 .back {
     width: 80%;
@@ -296,6 +310,10 @@ nav a:hover {
 
 .active {
     color: var(--yellow) !important;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 /*--------------------------------------------- Home ------------------------------------------------*/
@@ -1230,29 +1248,49 @@ footer p {
     /*--------------------------------------------- aside ------------------------------------------------*/
     aside {
         width: 100%;
-        height: 100vh;
         padding: 3% 3% 3% 3%;
         z-index: 3;
+        height: 19vh; /* Altura inicial */
+        overflow: hidden; /* Esconde o conteúdo excedente */
+        transition: height 0.3s ease; /* Animação suave */
+        cursor: pointer;
     }
 
+    aside.expanded {
+        height: 60vh; /* Altura total quando expandido */
+        overflow: visible; /* Mostra o conteúdo */
+    }
+    
     .aside_content {
+        opacity: 1;
+        transition: opacity 0.3s ease;
         background-color: var(--background-content);
         border: var(--border-content);
         box-shadow: var(--shadow-background);
         border-radius: 20px;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: start;
-        padding: 10%;
         height: 100%;
+        padding: 10%;
         width: 100%;
         color: var(--title);
+        gap: 10px;
+    }
+
+    aside.expanded .aside_content {
+        opacity: 1; 
+    }
+
+    aside.expanded .aside-line {
+        opacity: .2; 
     }
 
     .perfil {
         margin-top: 0px;
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
 
     .perfil img{
@@ -1282,8 +1320,14 @@ footer p {
         margin: 0;
     }
 
+    .perfil-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .aside_content h1{
-        margin-top: 25px;
+        margin-top: 20px;
         font-size: 17px;
     }
 
@@ -1296,10 +1340,18 @@ footer p {
         display: inline;
     }
 
+    .fa-chevron-down {
+        display: inline;
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .aside-line {
         margin-top: 15px;
         background-color: var(--text);
-        opacity: .2;
+        opacity: 0;
         border-radius: 20px;
         height: 1px;
         width: 100%;
@@ -1348,7 +1400,7 @@ footer p {
     }
 
     .aside-email-box a {
-        font-size: 12px;
+        font-size: 14px;
         color: var(--title);
     }
 
@@ -1380,7 +1432,7 @@ footer p {
     }
 
     .aside-phone-box a {
-        font-size: 12px;
+        font-size: 14px;
         color: var(--title);
     }
 
@@ -1406,13 +1458,15 @@ footer p {
     }
 
     .aside-location-box span:last-child {
-        font-size: 12px;
+        font-size: 14px;
         color: var(--title);
     }
 
     .aside-social-media {
+        width: 100%;
         display: flex;
-        gap: 35px;
+        justify-content: center;
+        gap: 60px;
         margin-top: 30px;
     }
 
@@ -1427,25 +1481,32 @@ footer p {
         color: var(--yellow);
     }
 
+    .copy-mobile {
+        margin-top: 15px !important;
+        display: block;
+        text-align: center;
+        font-size: 12px !important;
+    }
+
     /*--------------------------------------------- content ------------------------------------------------*/
     .back {
-        width: 80%;
-        height: 100vh;
-        padding: 3% 3% 3% 1.5%;
+        width: 100%;
+        height: 70vh;
+        padding: 1.5% 3% 3% 3%;
     }
 
     nav {
         background-color: var(--background-content2);
         border: var(--border-content);
-        width: 70%;
-        height: 10%;
-        border-radius: 0px 15px 0px 15px;
+        width: 100%;
+        height: 10vh;
+        border-radius: 15px 15px 0px 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: fixed;
+        top: auto;
+        bottom: 0;
         z-index: 3;
     }
 
@@ -1456,15 +1517,21 @@ footer p {
     }
 
     nav a {
-        color: var(--text);
+        display: none;
     }
 
     nav a:hover {
         color: var(--yellow);
     }
 
-    .active {
-        color: var(--yellow) !important;
+    .active-mobile {
+        filter: invert(35%) sepia(100%) saturate(1000%) hue-rotate(40deg) brightness(1.2);
+    }
+
+    .logo-mobile {
+        display: inline;
+        height: 35px;
+        width: 35px;
     }
 
     /*--------------------------------------------- Home ------------------------------------------------*/
@@ -1513,7 +1580,7 @@ footer p {
 
     .home-div-title {
         width: 30%;
-        height: 20%;
+        height: 15%;
         color: var(--title);
     }
 
@@ -1526,6 +1593,7 @@ footer p {
 
     .apresentation {
         color: var(--text);
+        font-size: 18px;
     }
 
     .keyword {
@@ -1626,8 +1694,8 @@ footer p {
     }
 
     .about-div-title {
-        width: 30%;
-        height: 20%;
+        width: 100%;
+        height: 15%;
         color: var(--title);
     }
 
@@ -1640,13 +1708,13 @@ footer p {
 
     .about-text {
         width: 100%;
-        height: 40%;
+        height: 90%;
         color: var(--text);
     }
 
     .skills {
         width: 100%;
-        height: 90%;
+        height: 100%;
     }
 
     .skills h2 {
@@ -1664,7 +1732,7 @@ footer p {
     .skills-navbar ul {
         display: flex;
         justify-content: space-between;
-        width: 40%;
+        width: 100%;
     }
 
     .skills-navbar ul a {
@@ -1676,14 +1744,15 @@ footer p {
     }
 
     .skills-content {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
     }
 
     .skills-front {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        place-items: center;
     }
 
     .skills-front img {
@@ -1703,8 +1772,9 @@ footer p {
 
     .skills-back {
         display: none;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        place-items: center;
     }
 
     .skills-back img {
@@ -1724,8 +1794,9 @@ footer p {
 
     .skills-tools {
         display: none;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        place-items: center;
     }
 
     .skills-tools img {
@@ -1745,16 +1816,18 @@ footer p {
 
     .wid {
         width: 100%;
-        height: 60%;
+        height: 100%;
     }
 
     .wid h2 {
         color: var(--title);
+        margin-top: 30px;
     }
 
     .wid-content {
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
@@ -1765,12 +1838,12 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px;
-        width: 49%;
+        padding: 0px 20px 0px 20px;
+        width: 100%;
         background-color: var(--background-content2);
         box-shadow: var(--shadow-content);
         border-radius: 20px;
-        height: 100px;
+        height: 150px;
         margin-bottom: 10px;
         gap: 25px;
         transition: transform 0.3s ease;
@@ -1786,7 +1859,7 @@ footer p {
     }
 
     .wid-web div p {
-        font-size: 14px;
+        font-size: 12px;
         color: var(--text);
         opacity: .8;
     }
@@ -1795,12 +1868,12 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px;
-        width: 49%;
+        padding: 0px 20px 0px 20px;
+        width: 100%;
         background-color: var(--background-content2);
         box-shadow: var(--shadow-content);
         border-radius: 20px;
-        height: 100px;
+        height: 150px;
         margin-bottom: 10px;
         gap: 25px;
         transition: transform 0.3s ease;
@@ -1826,12 +1899,12 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px;
-        width: 49%;
+        padding: 0px 20px 0px 20px;
+        width: 100%;
         background-color: var(--background-content2);
         box-shadow: var(--shadow-content);
         border-radius: 20px;
-        height: 100px;
+        height: 150px;
         margin-bottom: 10px;
         gap: 25px;
         transition: transform 0.3s ease;
@@ -1898,8 +1971,8 @@ footer p {
     }
 
     .projects-div-title {
-        width: 30%;
-        height: 20%;
+        width: 100%;
+        height: 15%;
         color: var(--title);
     }
 
@@ -1917,8 +1990,8 @@ footer p {
 
     .projects-navbar ul {
         display: flex;
-        justify-content: space-around;
-        width: 40%;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .projects-navbar ul a {
@@ -1936,10 +2009,10 @@ footer p {
     }
 
     .projects-box > div {
-        flex-basis: calc(25% - 10px); 
+        flex-basis: calc(100% - 10px); 
         background-color: var(--background-content2);
         padding: 8px;
-        margin-bottom: 10px; 
+        margin-bottom: 20px; 
         height: 200px;
         border-radius: 20px;
         cursor: pointer;
@@ -2035,8 +2108,8 @@ footer p {
     }
 
     .resume-div-title {
-        width: 30%;
-        height: 20%;
+        width: 100%;
+        height: 15%;
         color: var(--title);
     }
 
@@ -2048,8 +2121,9 @@ footer p {
     }
 
     .resume-trajetory {
+        margin-top: 25px;
         width: 100%;
-        height: 45%;
+        height: auto;
         display: flex;
         flex-direction: column;
     }
@@ -2090,11 +2164,12 @@ footer p {
         align-items: center;
         justify-content: center;
         color: var(--yellow);
+        z-index: 1;
     }
 
     .resume-trajetory-education {
         width: 45%;
-        text-align: left;
+        text-align: right;
     }
 
     .resume-trajetory-education a {
@@ -2109,11 +2184,13 @@ footer p {
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
     }
 
     .resume-work {
-        width: 45%;
+        width: 100%;
         text-align: right;
+        z-index: 1;
     }
 
     .works {
@@ -2160,27 +2237,35 @@ footer p {
     }
 
     .resume-trajetory-line {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 40px;
         display: flex;
         justify-content: center;
+        height: 100%;
+        z-index: 0;
     }
 
     .resume-trajetory-line div {
         background-color: var(--text);
         opacity: .2;
         width: 1px;
+        height: 80%;
     }
 
     .resume-education {
-        width: 45%;
+        width: 100%;
         text-align: left;
+        z-index: 1;
     }
 
     .educations {
         display: none;
         margin-top: 25px;
         flex-direction: column;
-        gap: 60px;
+        gap: 30px;
         color: var(--text);
     }
 
@@ -2229,7 +2314,7 @@ footer p {
 
     .contact-content {
         background-image: url(assets/img/background.png);
-        background-position: center;
+        background-position: unset;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -2262,8 +2347,8 @@ footer p {
     }
 
     .contact-div-title {
-        width: 30%;
-        height: 20%;
+        width: 100%;
+        height: 15%;
         color: var(--title);
     }
 
@@ -2277,13 +2362,13 @@ footer p {
     .contact-form {
         position: absolute;
         top: 50%;
-        left: 65%;
+        left: 50%;
         transform: translate(-50%, -50%);
         background-color: hsla(240, 1%, 17%, .1);
         backdrop-filter: blur(7px);
         border: var(--border-content);
         border-radius: 20px;
-        width: 50%;
+        width: 90%;
         height: 60%;
         padding: 30px;
         box-shadow: var(--shadow-content-2);
@@ -2373,18 +2458,11 @@ footer p {
     }
 
     footer {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
+        display: none;
     }
 
     footer p {
-        color: var(--text);
-        opacity: .2;
+        display: none;
     }
 }
 
