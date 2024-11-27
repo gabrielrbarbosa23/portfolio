@@ -10,22 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <script>
-        Swal.fire({
-            title: "Este portfólio está em andamento.",
-            text: "Deseja ver o portfólio em vigor ou ver o andamento deste?",
-            showDenyButton: true,
-            showCancelButton: false,
-            confirmButtonText: "Portfólio em vigor",
-            denyButtonText: "Ver o andamento deste"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href='https://gabrielrbarbosa23.github.io/portfolio3D/';
-            } else if (result.isDenied) {
-                //fechar
-            }
-        });
-    </script>
     <aside onclick="toggleAside()" id="aside">
         <div class="aside_content">
             <div class="perfil">
@@ -37,6 +21,8 @@
             </div>
 
             <br class="br-mobile">
+
+            <i class="fa-solid fa-angle-down"></i>
 
             <div class="aside-line"></div>
 
