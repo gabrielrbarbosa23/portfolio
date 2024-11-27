@@ -134,7 +134,7 @@ aside {
 }
 
 .fa-angle-down {
-    display: none;
+    opacity: 0;
 }
 
 .aside-line {
@@ -1341,7 +1341,7 @@ footer p {
     }
 
     .fa-angle-down {
-        display: inline;
+        opacity: 1;
         position: absolute;
         top: 16%;
         left: 50%;
@@ -2573,7 +2573,7 @@ footer p {
     }
 
     .fa-angle-down {
-        display: inline;
+        opacity: 1;
         position: absolute;
         top: 16%;
         left: 50%;
@@ -3808,7 +3808,7 @@ footer p {
     }
 
     .fa-angle-down {
-        display: inline;
+        opacity: 1;
         position: absolute;
         top: 20%;
         left: 50%;
