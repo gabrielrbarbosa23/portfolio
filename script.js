@@ -59,12 +59,10 @@ function contact() {
 
 /*--------------------------------------------- projects ------------------------------------------------*/
 $(document).ready(function () {
-    // Mostrar apenas as divs com classe 'frontend'
     $('.frontend').show();
     $('.fullstack').hide();
     $('.backend').hide();
 
-    // Adicionar classe ativa ao botão de frontend se houver
     $('#nav-frontend').addClass('active');
     $('#nav-fullstack').removeClass('active');
     $('#nav-backend').removeClass('active');
