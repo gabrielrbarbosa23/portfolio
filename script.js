@@ -59,29 +59,23 @@ function contact() {
 
 /*--------------------------------------------- projects ------------------------------------------------*/
 $(document).ready(function () {
-    $('.frontend').show();
-    $('.fullstack').hide();
     $('.backend').hide();
+    $('.frontend').show();
 
     $('#nav-frontend').addClass('active');
-    $('#nav-fullstack').removeClass('active');
     $('#nav-backend').removeClass('active');
 });
 
 function frontend() {
-    $('.frontend').show();
-    $('.fullstack').show();
     $('.backend').hide();
-    $('#nav-fullstack').removeClass('active');
+    $('.frontend').show();
     $('#nav-backend').removeClass('active');
     $('#nav-frontend').addClass('active');
 }
 
 function backend() {
-    $('.backend').show();
-    $('.fullstack').show();
     $('.frontend').hide();
-    $('#nav-fullstack').removeClass('active');
+    $('.backend').show();
     $('#nav-frontend').removeClass('active');
     $('#nav-backend').addClass('active');
 }
@@ -89,8 +83,6 @@ function backend() {
 function fullstack() {
     $('.frontend').show();
     $('.backend').show();
-    $('.fullstack').show();
-    $('#nav-fullstack').addClass('active');
     $('#nav-frontend').removeClass('active');
     $('#nav-backend').removeClass('active');
 }
