@@ -145,6 +145,19 @@ function education() {
 /*--------------------------------------------- aside mobile ------------------------------------------------*/
 
 function toggleAside() {
-    const aside = document.getElementById('aside');
-    aside.classList.toggle('expanded');
+    const isVisible = $('.aside-content-content').css('display') === 'flex';
+
+    if (isVisible) {
+        $('.aside-content-content').hide();
+        $('.aside-line').hide();
+        $('#toggle-icon')
+            .removeClass('fa-angle-up')
+            .addClass('fa-angle-down');
+    } else {
+        $('.aside-content-content').css('display', 'flex').show();
+        $('.aside-line').show();
+        $('#toggle-icon')
+            .removeClass('fa-angle-down')
+            .addClass('fa-angle-up');
+    }
 }
