@@ -145,19 +145,21 @@ function education() {
 /*--------------------------------------------- aside mobile ------------------------------------------------*/
 
 function toggleAside() {
-    const isVisible = $('.aside-content-content').css('display') === 'flex';
+    if (window.innerWidth <= 1024) {
+        const isVisible = $('.aside-content-content').css('display') === 'flex';
 
-    if (isVisible) {
-        $('.aside-content-content').hide();
-        $('.aside-line').hide();
-        $('#toggle-icon')
-            .removeClass('fa-angle-up')
-            .addClass('fa-angle-down');
-    } else {
-        $('.aside-content-content').css('display', 'flex').show();
-        $('.aside-line').show();
-        $('#toggle-icon')
-            .removeClass('fa-angle-down')
-            .addClass('fa-angle-up');
+        if (isVisible) {
+            $('.aside-content-content').hide();
+            $('.aside-line').hide();
+            $('#toggle-icon')
+                .removeClass('fa-angle-up')
+                .addClass('fa-angle-down');
+        } else {
+            $('.aside-content-content').css('display', 'flex').show();
+            $('.aside-line').show();
+            $('#toggle-icon')
+                .removeClass('fa-angle-down')
+                .addClass('fa-angle-up');
+        }
     }
 }
