@@ -3,7 +3,7 @@ This is my personal updated portfolio
 
 **Link to project:** https://gabrielrbarbosa23.github.io/portfolio/
 
-![port]([https://github.com/user-attachments/assets/9e6df8c3-4156-4150-b2ec-72f3e9243a9c](https://github.com/user-attachments/assets/0a4bac08-ad11-49a1-ae29-d2e9d3fb5e3d))
+<img width="1339" height="612" alt="image" src="https://github.com/user-attachments/assets/ae4b6733-9e12-4304-b56b-ff69a8e58dcf" />
 
 
 ## How It's Made:
